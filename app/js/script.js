@@ -36,4 +36,27 @@ function validimiKontakt(){
     }
 }
 
+function validimiRegister(){
+    var email = document.getElementById('email').value;
+    var psw = document.getElementById('psw').value;
+    var pswRepeat = document.getElementById('psw-repeat').value;
+    if(email == ""){
+        alert("Email nuk mund te jete i zbrazet")
+    } else if (psw == ""){
+        alert("Password nuk mund te jete i zbrazet")
+    } else if (psw !== pswRepeat){
+        alert("Password duhet te perputhet")
+    }
+}
+
+function validimiLogin(){
+    var email = document.getElementById('email').value;
+    var psw = document.getElementById('psw').value;
+    if(email == ""){
+        alert("Email nuk mund te jete i zbrazet")
+    } else if (psw == ""){
+        alert("Password nuk mund te jete i zbrazet")
+    }
+}
+
     
