@@ -1,6 +1,6 @@
 # projektiWebInxhinieri
 
-[Live Preview](https://getoarmorina3.github.io/projektiWebInxhinieri/)
+[Live Preview](https://getoarmorina3.github.io/projektiWebInxhinieri-main/)
 
 Design from Frontend Mentor Website
 
