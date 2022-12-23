@@ -27,36 +27,43 @@ btnHamburger.addEventListener('click', function(){
 });
 
 function validimiKontakt(){
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-    if(email == ""){
-        alert("Email nuk mund te jete i zbrazet")
-    } else if (message == ""){
-        alert("Mesazhi nuk mund te jete i zbrazet")
+    const emailValidator = () => {
+        const email = document.getElementById("email");
+        const emailIsValid = /^[^@]+@[^@.]+.[a-z]+$/i.test(email.value);
+        emailIsValid? console.log("Email eshte mire") : console.log("Email eshte gabim");
+        return emailIsValid
+    }
+    const message = document.getElementById("message").value;
+    if(!emailValidator()){
+        alert("Formati i email nuk eshte i sakte");
+    }
+
+    if(message === ""){
+        alert("Mesazhi nuk mund te jete i zbrazet");
     }
 }
 
-function validimiRegister(){
-    var email = document.getElementById('email').value;
-    var psw = document.getElementById('psw').value;
-    var pswRepeat = document.getElementById('psw-repeat').value;
-    if(email == ""){
-        alert("Email nuk mund te jete i zbrazet")
-    } else if (psw == ""){
-        alert("Password nuk mund te jete i zbrazet")
-    } else if (psw !== pswRepeat){
-        alert("Password duhet te perputhet")
-    }
-}
+// function validimiRegister(){
+//     var email = document.getElementById('email').value;
+//     var psw = document.getElementById('psw').value;
+//     var pswRepeat = document.getElementById('psw-repeat').value;
+//     if(email == ""){
+//         alert("Email nuk mund te jete i zbrazet")
+//     } else if (psw == ""){
+//         alert("Password nuk mund te jete i zbrazet")
+//     } else if (psw !== pswRepeat){
+//         alert("Password duhet te perputhet")
+//     }
+// }
 
-function validimiLogin(){
-    var email = document.getElementById('email').value;
-    var psw = document.getElementById('psw').value;
-    if(email == ""){
-        alert("Email nuk mund te jete i zbrazet")
-    } else if (psw == ""){
-        alert("Password nuk mund te jete i zbrazet")
-    }
-}
+// function validimiLogin(){
+//     var email = document.getElementById('email').value;
+//     var psw = document.getElementById('psw').value;
+//     if(email == ""){
+//         alert("Email nuk mund te jete i zbrazet")
+//     } else if (psw == ""){
+//         alert("Password nuk mund te jete i zbrazet")
+//     }
+// }
 
     
